@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="cache_worker" class="com.ambimmort.udserver.core.UdMessageWorker" scope="prototype"/>
+
+       <bean id="cache_processor" class="com.ambimmort.udserver.core.CacheProcessor" scope="singleton"/>
+
+       <bean id="cache_cacher" class="com.ambimmort.udserver.core.MessageCacher" scope="singleton">
+              <property name="cache_processor" ref="cache_processor"/>
+              <property name="cacheLimit" value="1000000"/>
+              <property name="timeLimit" value="90000"/>
+       </bean>
+
+       <bean id="thread1" class="java.lang.Thread" init-method="start" lazy-init="false">
+              <constructor-arg index="0" ref="cache_cacher"/>
+       </bean>
+</beans>

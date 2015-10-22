@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <beans:property name="url" value="jdbc:mysql://59.68.29.3/fims2" />
+        <beans:property name="username" value="FTUser" />
+        <beans:property name="password" value="Maxgi000000" />
+    </beans:bean>
+
+    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query=
+                                       "select username,password, enabled from users where username=?"
+                               authorities-by-username-query=
+                                       "select username, role from user_roles where username =?  " />
+        </authentication-provider>
+    </authentication-manager>
+
+
+    <http pattern="/signin**" security="none" />
+    <http pattern="/signup**" security="none" />
+    <http pattern="/signout**" security="none" />
+    <http pattern="/resources/**" security="none" />
+    <http pattern="/auth/**" security="none" />
+
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+        <form-login
+                login-page="/signin.do"
+                default-target-url="/index.do"
+                authentication-failure-url="/signin.do?error"
+                username-parameter="username"
+                password-parameter="password"
+                login-processing-url="/j_spring_security_check"
+                authentication-success-handler-ref="savedRequestAwareAuthenticationSuccessHandler"
+                />
+        <logout logout-success-url="/signin.do?signout" delete-cookies="JSESSIONID"/>
+        <!-- enable remember me -->
+        <remember-me
+                token-validity-seconds="1209600"
+                remember-me-parameter="remember-me"
+                data-source-ref="dataSource" />
+    </http>
+    <beans:bean id="savedRequestAwareAuthenticationSuccessHandler"
+          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+        <beans:property name="targetUrlParameter" value="targetUrl" />
+    </beans:bean>
+
+</beans:beans>

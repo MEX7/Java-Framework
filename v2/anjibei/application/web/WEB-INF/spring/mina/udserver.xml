@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="serverHandler" class="com.ambimmort.udserver.core.UdMsgHandler" />
+
+       <bean id="udmsgDecoder" class="com.ambimmort.udserver.core.UdMsgDecoderV2"/>
+
+       <bean id="protocolCodecFactory" class="com.ambimmort.udserver.core.UdProtocolCodecFactory">
+              <property name="decoder" ref="udmsgDecoder"/>
+       </bean>
+
+       <bean id="codecFilter" class="org.apache.mina.filter.codec.ProtocolCodecFilter">
+              <constructor-arg>
+                     <ref bean="protocolCodecFactory"/>
+              </constructor-arg>
+       </bean>
+
+       <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+              <property name="customEditors">
+                     <map>
+                            <entry key="java.net.SocketAddress" value="org.apache.mina.integration.beans.InetSocketAddressEditor">
+                            </entry>
+                     </map>
+              </property>
+       </bean>
+
+       <bean id="executorFilter" class="org.apache.mina.filter.executor.ExecutorFilter" >
+              <constructor-arg index="0" value="60"/>
+              <constructor-arg index="1" value="100"/>
+       </bean>
+
+       <bean id="filterChainBuilder" class="org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder">
+              <property name="filters">
+                     <map>
+
+                            <entry key="codecFilter" value-ref="codecFilter" />
+                            <entry key="executorFilter" value-ref="executorFilter" />
+                     </map>
+              </property>
+       </bean>
+
+       <bean id="ioAcceptor" class="org.apache.mina.transport.socket.nio.NioSocketAcceptor" init-method="bind" destroy-method="unbind">
+              <property name="defaultLocalAddress" value=":${udserver.port}" />
+              <property name="handler" ref="serverHandler" />
+              <property name="filterChainBuilder" ref="filterChainBuilder" />
+              <property name="reuseAddress" value="true" />
+       </bean>
+
+</beans>

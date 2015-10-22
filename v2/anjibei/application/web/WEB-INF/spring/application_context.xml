@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-merge="true" xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:configuration.properties</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+    <bean id="springContextUtil" class="com.anjibei.app.framework.uitls.Application" scope="singleton"/>
+
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--<beans:property name="url" value="jdbc:h2:tcp://localhost:9092/../db/test;MODE=MYSQL" />-->
+        <property name="url" value="jdbc:mysql://**?characterEncoding=utf-8"/>
+        <!--<beans:property name="url" value="jdbc:mysql://210.42.159.133:25104/mytraindb?characterEncoding=utf-8"/>-->
+        <property name="username" value="**" />
+        <property name="password" value="**" />
+    </bean>
+
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+        <!--&lt;!&ndash;<beans:property name="url" value="jdbc:h2:tcp://localhost:9092/../db/test;MODE=MYSQL" />&ndash;&gt;-->
+        <!--<property name="url" value="jdbc:mysql://59.68.29.3/fims2?characterEncoding=utf-8"/>-->
+        <!--&lt;!&ndash;<beans:property name="url" value="jdbc:mysql://210.42.159.133:25104/mytraindb?characterEncoding=utf-8"/>&ndash;&gt;-->
+        <!--<property name="username" value="FTUser" />-->
+        <!--<property name="password" value="Maxgi000000" />-->
+    <!--</bean>-->
+
+    <import resource="mvc.xml"/>
+    <import resource="schedulers/scheduler_example.xml"/>
+    <!--<import resource="spring-security.xml"/>-->
+    <!--<import resource="threads/threadpool.xml"/>-->
+    <!--<import resource="rabbitmq/config.xml"/>-->
+    <!--<import resource="mina/udserver.xml"/>-->
+    <!--<import resource="monitor/monitor.xml"/>-->
+    <!--<import resource="navigator/default.xml"/>-->
+    <!--<import resource="cache/timecache.xml"/>-->
+</beans>

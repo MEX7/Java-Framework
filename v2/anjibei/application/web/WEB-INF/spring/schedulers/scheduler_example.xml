@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean id="taskJob" class="com.anjibei.app.framework.schedulers.ExampleTask"/>
+       <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+              <property name="targetObject" ref="taskJob"/>
+              <property name="targetMethod" value="run1"/>
+              <property name="concurrent" value="false"/>
+       </bean>
+
+       <bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+              <property name="jobDetail" ref="jobDetail"/>
+              <property name="cronExpression" value="0 0 9 * * ?"/>
+              <!--<property name="cronExpression" value="0/20 * * * * ?"/>-->
+       </bean>
+
+       <!-- 调度工厂 -->
+       <bean id="cronScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false">
+              <property name="triggers">
+                     <list>
+                            <ref bean="myTrigger"/>
+                     </list>
+              </property>
+              <property name="autoStartup" value="true"/>
+              <property name="schedulerName" value="cronScheduler" />
+       </bean>
+</beans>

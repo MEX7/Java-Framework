@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="java.io.File" init-method="mkdirs" lazy-init="false">
+        <constructor-arg index="0" value="run/monitored"/>
+    </bean>
+
+    <bean id="cmd_echo" class="com.fims.app.framework.fsmonitor.commands.EchoCommand"/>
+
+
+    <bean id="monitor" class="com.fims.app.framework.fsmonitor.CommandStdIn" init-method="start" lazy-init="false">
+        <property name="commands" >
+            <map>
+                <entry key="echo" value-ref="cmd_echo"/>
+            </map>
+        </property>
+    </bean>
+
+
+
+</beans>

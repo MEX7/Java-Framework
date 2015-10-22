@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="rabbitConnectionFactory" class="com.rabbitmq.client.ConnectionFactory" scope="singleton">
+        <property name="host" value="${rabbitmq.host}"/>
+        <property name="port" value="${rabbitmq.port}"/>
+        <property name="username" value="udserver"/>
+        <property name="password" value="udserver"/>
+        <property name="automaticRecoveryEnabled" value="true"/>
+        <property name="topologyRecoveryEnabled" value="true"/>
+        <property name="requestedHeartbeat" value="1"/>
+        <property name="connectionTimeout" value="5000"/>
+    </bean>
+
+    <bean id="rabbitConnection" class="com.rabbitmq.client.Connection" factory-bean="rabbitConnectionFactory" factory-method="newConnection" scope="singleton"/>
+
+</beans>

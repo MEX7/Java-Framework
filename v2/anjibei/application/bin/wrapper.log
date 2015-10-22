@@ -1,0 +1,145 @@
+WARN   | wrapper  | 2015/09/15 09:29:53 | Unable to write to the configured log directory: ../logs (No such file or directory)
+WARN   | wrapper  | 2015/09/15 09:29:53 |   The directory does not exist.
+WARN   | wrapper  | 2015/09/15 09:29:53 | Unable to write to the configured log file: ../logs/wrapper.log (No such file or directory)
+WARN   | wrapper  | 2015/09/15 09:29:53 |   Falling back to the default file in the current working directory: wrapper.log
+STATUS | wrapper  | 2015/09/15 09:29:53 | --> Wrapper Started as Console
+STATUS | wrapper  | 2015/09/15 09:29:53 | Java Service Wrapper Community Edition 64-bit 3.5.25
+STATUS | wrapper  | 2015/09/15 09:29:53 |   Copyright (C) 1999-2014 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2015/09/15 09:29:53 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2015/09/15 09:29:53 | 
+STATUS | wrapper  | 2015/09/15 09:29:54 | Launching a JVM...
+INFO   | jvm 1    | 2015/09/15 09:29:54 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.036 SEVERE [WrapperSimpleAppMain] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at ../tomcat/temp
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.768 INFO [WrapperSimpleAppMain] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.794 INFO [WrapperSimpleAppMain] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.797 INFO [WrapperSimpleAppMain] org.apache.catalina.startup.Catalina.load Initialization processed in 763 ms
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.817 INFO [WrapperSimpleAppMain] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+INFO   | jvm 1    | 2015/09/15 09:29:55 | 15-Sep-2015 09:29:55.817 INFO [WrapperSimpleAppMain] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.15
+INFO   | jvm 1    | 2015/09/15 09:30:04 | Hello. Application Started.
+INFO   | jvm 1    | 2015/09/15 09:30:04 | Working Dir: /Users/MEX/cosmos/AnJiBei_Web_Project/anjibei/application/bin/..
+INFO   | jvm 1    | 2015/09/15 09:30:04 | 原始：tangfuqiang
+INFO   | jvm 1    | 2015/09/15 09:30:04 | 20b75697d8bf931a6730662ae117c3bf
+INFO   | jvm 1    | 2015/09/15 09:30:04 | NqOHqZgrPxxZ4neA6TIeN8TjylFwI8a8i+vK/jmTN7VVZz7dBktekh9p0rYk6pP0
+INFO   | jvm 1    | 2015/09/15 09:30:04 | 
+INFO   | jvm 1    | 2015/09/15 09:30:04 | 20b75697d8bf931a6730662ae117c3bf
+INFO   | jvm 1    | 2015/09/15 09:30:04 | log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+INFO   | jvm 1    | 2015/09/15 09:30:04 | log4j:WARN Please initialize the log4j system properly.
+INFO   | jvm 1    | 2015/09/15 09:30:04 | log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+INFO   | jvm 1    | 2015/09/15 09:30:07 | 15-Sep-2015 09:30:07.916 INFO [WrapperSimpleAppMain] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+INFO   | jvm 1    | 2015/09/15 09:30:07 | 15-Sep-2015 09:30:07.924 INFO [WrapperSimpleAppMain] org.apache.catalina.startup.Catalina.start Server startup in 12126 ms
+INFO   | jvm 1    | 2015/09/15 09:32:35 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:32:35 | parameter:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:32:35 | user:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:32:36 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:41:29 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:41:29 | parameter:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:41:29 | user:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:41:32 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:41:32 | parameter:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:41:32 | user:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:41:34 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:41:37 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:45:26 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:45:26 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userPicPath" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userPassword" : "1234567",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userSignature" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userTime" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userNickname" : "为你撑伞",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userId" : "18571658411",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userSex" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "path" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "sid" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "thirdPartAutCode" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userBirth" : "0",
+INFO   | jvm 1    | 2015/09/15 09:45:26 |   "userSid" : "0"
+INFO   | jvm 1    | 2015/09/15 09:45:26 | }
+INFO   | jvm 1    | 2015/09/15 09:45:26 | user:{"userSid":0,"userId":"18571658411","userNickname":"为你撑伞","userSex":"0","userSignature":"0","userPicPath":"0","userTime":0,"userPassword":"1234567"}
+INFO   | jvm 1    | 2015/09/15 09:45:29 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:46:22 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:46:22 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userPicPath" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userPassword" : "1234567",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userSignature" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userTime" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userNickname" : "为你撑伞",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userId" : "18571658411",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userSex" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "path" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "sid" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "thirdPartAutCode" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userBirth" : "0",
+INFO   | jvm 1    | 2015/09/15 09:46:22 |   "userSid" : "0"
+INFO   | jvm 1    | 2015/09/15 09:46:22 | }
+INFO   | jvm 1    | 2015/09/15 09:46:22 | user:{"userSid":0,"userId":"18571658411","userNickname":"为你撑伞","userSex":"0","userSignature":"0","userPicPath":"0","userTime":0,"userPassword":"1234567"}
+INFO   | jvm 1    | 2015/09/15 09:46:28 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:47:01 | #####improveUserInfo start#####
+INFO   | jvm 1    | 2015/09/15 09:47:01 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:47:01 |   "userBabyName" : "此生为你",
+INFO   | jvm 1    | 2015/09/15 09:47:01 |   "userBabySex" : "1",
+INFO   | jvm 1    | 2015/09/15 09:47:01 |   "userPergnancy" : "1",
+INFO   | jvm 1    | 2015/09/15 09:47:01 |   "userBabyBirth" : "1389715740",
+INFO   | jvm 1    | 2015/09/15 09:47:01 |   "sid" : "E2FABFB3F40C54DCD2DEC7D2124DE23B"
+INFO   | jvm 1    | 2015/09/15 09:47:01 | }
+INFO   | jvm 1    | 2015/09/15 09:47:01 | userSid:119
+INFO   | jvm 1    | 2015/09/15 09:47:02 | #####improveUserInfo end#####
+INFO   | jvm 1    | 2015/09/15 09:47:02 | #####getMultipleRecommendArticle start#####
+INFO   | jvm 1    | 2015/09/15 09:47:02 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:47:02 |   "sid" : "E2FABFB3F40C54DCD2DEC7D2124DE23B",
+INFO   | jvm 1    | 2015/09/15 09:47:02 |   "listSid" : "2"
+INFO   | jvm 1    | 2015/09/15 09:47:02 | }
+INFO   | jvm 1    | 2015/09/15 09:47:02 | sessionId:E2FABFB3F40C54DCD2DEC7D2124DE23B
+INFO   | jvm 1    | 2015/09/15 09:47:02 | userSid:119
+INFO   | jvm 1    | 2015/09/15 09:47:02 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:47:02 | parameter:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:47:02 | user:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:47:03 | babyDays: 609
+INFO   | jvm 1    | 2015/09/15 09:47:05 | #####registNewUser start#####
+INFO   | jvm 1    | 2015/09/15 09:47:05 | parameter:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:47:05 | user:{"userId":"15827043554","userNickname":"心尚温","userPassword":"111111"}
+INFO   | jvm 1    | 2015/09/15 09:47:06 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:47:07 | #####registNewUser end#####
+INFO   | jvm 1    | 2015/09/15 09:47:09 | #####getMultipleRecommendArticle end#####
+INFO   | jvm 1    | 2015/09/15 09:47:09 | #####getLatestRecommendVideo start#####
+INFO   | jvm 1    | 2015/09/15 09:47:09 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:47:09 |   "listSid" : "0",
+INFO   | jvm 1    | 2015/09/15 09:47:09 |   "userCollectType" : "0",
+INFO   | jvm 1    | 2015/09/15 09:47:09 |   "sid" : "E2FABFB3F40C54DCD2DEC7D2124DE23B",
+INFO   | jvm 1    | 2015/09/15 09:47:09 |   "userCollectTypeSid" : "0"
+INFO   | jvm 1    | 2015/09/15 09:47:09 | }
+INFO   | jvm 1    | 2015/09/15 09:47:09 | sessionId:E2FABFB3F40C54DCD2DEC7D2124DE23B
+INFO   | jvm 1    | 2015/09/15 09:47:09 | userSid:119
+INFO   | jvm 1    | 2015/09/15 09:47:11 | babyDays: 609
+INFO   | jvm 1    | 2015/09/15 09:47:15 | #####getLatestRecommendVideo end#####
+INFO   | jvm 1    | 2015/09/15 09:48:26 | #####changePassword start#####
+INFO   | jvm 1    | 2015/09/15 09:48:26 | parameter:{
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userPicPath" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userPassword" : "zhao123",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userSignature" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userTime" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userNickname" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userId" : "18571658411",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userSex" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "path" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "sid" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "thirdPartAutCode" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userBirth" : "0",
+INFO   | jvm 1    | 2015/09/15 09:48:26 |   "userSid" : "0"
+INFO   | jvm 1    | 2015/09/15 09:48:26 | }
+INFO   | jvm 1    | 2015/09/15 09:48:27 | 15-Sep-2015 09:48:27.632 INFO [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+INFO   | jvm 1    | 2015/09/15 09:48:27 | 15-Sep-2015 09:48:27.685 INFO [Thread-4] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+INFO   | jvm 1    | 2015/09/15 09:48:27 | 15-Sep-2015 09:48:27.738 INFO [localhost-startStop-2] org.apache.catalina.core.StandardWrapper.unload Waiting for 1 instance(s) to be deallocated for Servlet [service_dispatcher]
+INFO   | jvm 1    | 2015/09/15 09:48:27 | userSid:119
+INFO   | jvm 1    | 2015/09/15 09:48:28 | 15-Sep-2015 09:48:28.771 INFO [localhost-startStop-2] org.apache.catalina.core.StandardWrapper.unload Waiting for 1 instance(s) to be deallocated for Servlet [service_dispatcher]
+INFO   | jvm 1    | 2015/09/15 09:48:28 | #####changePassword end#####
+INFO   | jvm 1    | 2015/09/15 09:48:29 | Hello. Application Stopped.
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.003 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [api] registered the JDBC driver [org.h2.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.003 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [api] registered the JDBC driver [com.mysql.fabric.jdbc.FabricMySQLDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.004 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [api] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.004 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [api] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+INFO   | jvm 1    | 2015/09/15 09:48:29 |  java.lang.Object.wait(Native Method)
+INFO   | jvm 1    | 2015/09/15 09:48:29 |  java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:142)
+INFO   | jvm 1    | 2015/09/15 09:48:29 |  com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:41)
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.008 INFO [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+INFO   | jvm 1    | 2015/09/15 09:48:29 | 15-Sep-2015 09:48:29.087 INFO [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+STATUS | wrapper  | 2015/09/15 09:48:29 | <-- Wrapper Stopped
